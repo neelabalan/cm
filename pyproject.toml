@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "cm"
+version = "0.1.0"
+description = "command manager"
+authors = ["neelabalan <neelabalan.n@outlook.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+toml = "^0.10.2"
+rich = "^10.14.0"
+typer = {extras = ["all"], version = "^0.4.0"}
+jsondb = {git = "https://github.com/neelabalan/jsondb.git", rev = "main"}
+
+
+[tool.poetry.dev-dependencies]
+black = "^21.11b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+cm = "cm:run"
